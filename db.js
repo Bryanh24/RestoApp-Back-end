@@ -12,8 +12,8 @@ const DetalleComandaModel = require('./models/detalleComanda');
 
 
 
-const sequelize = new Sequelize('0C3kpgBVqb','0C3kpgBVqb','8Rj335jLU2',{
-    host:'remotemysql.com',
+const sequelize = new Sequelize('bp3yr079cjrme03razfr','uhdajdzjuyfqj0zc','la89eI8DiEppEODyAgiK',{
+    host:'bp3yr079cjrme03razfr-mysql.services.clever-cloud.com',
     dialect:'mysql'
 });
 
