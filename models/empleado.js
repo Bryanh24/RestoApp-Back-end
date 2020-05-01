@@ -7,7 +7,7 @@ module.exports = (sequelize, type) =>{
          },
          IdRol: type.INTEGER ,
          UsuarioEmpleado:type.STRING, 
-         PasswordEmpleado:  type.STRING, 
+         PasswordEmpleado:  type.STRING(150), 
          NombreEmpleado:  type.STRING,  
          ApellidoEmpleado:  type.STRING, 
          DireccionEmpleado:  type.STRING, 
