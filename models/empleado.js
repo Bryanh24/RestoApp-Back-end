@@ -5,12 +5,12 @@ module.exports = (sequelize, type) =>{
              primaryKey: true,
              autoIncrement: true
          },
-         IdRol: type.INTEGER ,
+         idRol: type.INTEGER ,
          UsuarioEmpleado:type.STRING, 
          PasswordEmpleado:  type.STRING(150), 
          NombreEmpleado:  type.STRING,  
          ApellidoEmpleado:  type.STRING, 
          DireccionEmpleado:  type.STRING, 
-         TelefonoEmpleado: type.INTEGER
+         TelefonoEmpleado: type.STRING
     })
 }

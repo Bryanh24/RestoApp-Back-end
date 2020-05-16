@@ -12,16 +12,16 @@ router.post('/',async(req, res)=>{
     res.json(categoriaPlatos);
 });
 
-router.put('/:idCategoriaPlato', async (req, res) => {
+router.put('/:IdCategoriaPlato', async (req, res) => {
     await CategoriaPlato.update(req.body, {
-        where: {idCategoriaPlato: req.params.idCategoriaPlato}
+        where: {IdCategoriaPlato: req.params.IdCategoriaPlato}
     });
     res.json({success: 'se ha modificado'})
 });
 
-router.delete('/:idCategoriaPlato', async (req, res) => {
+router.delete('/:IdCategoriaPlato', async (req, res) => {
      await CategoriaPlato.destroy({
-        where: {idCategoriaPlato: req.params.idCategoriaPlato}
+        where: {IdCategoriaPlato: req.params.IdCategoriaPlato}
     });
     res.json({succes: 'se ha eliminado.'})
 });

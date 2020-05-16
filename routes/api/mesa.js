@@ -12,9 +12,9 @@ router.post('/',async(req, res)=>{
     res.json(mesas);
 });
 
-router.put('/:idMesa', async (req, res) => {
+router.put('/:IdMesa', async (req, res) => {
     await Mesa.update(req.body, {
-        where: {idMesa: req.params.idMesa}
+        where: {IdMesa: req.params.IdMesa}
     });
     res.json({success: 'se ha modificado'})
 });

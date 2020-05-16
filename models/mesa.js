@@ -1,10 +1,11 @@
 module.exports = (sequelize, type) =>{
     return sequelize.define('mesa',{
-         idRol: {
+         IdMesa: {
              type: type.INTEGER,
              primaryKey: true,
              autoIncrement: true
          },
-         DescripcionMesa: type.STRING 
+         DescripcionMesa: type.STRING ,
+         EstadoMesa: type.INTEGER
     })
 }

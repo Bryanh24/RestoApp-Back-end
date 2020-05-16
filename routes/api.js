@@ -8,18 +8,19 @@ const apiMesa = require('./api/mesa')
 const apiEmpleado = require('./api/empleado')
 const apiComanda = require('./api/comanda')
 const apiDetalleComanda = require('./api/detalleComanda')
+const middlewares = require('./middlware/middlware')
 
 
 
-router.use('/roles',apiRolesRouter);
-router.use('/categoriaProducto',apiCategoriaProducto);
-router.use('/categoriaPlato',apiCategoriaPlato);
-router.use('/producto',apiProducto);
-router.use('/plato',apiPlato);
-router.use('/mesa',apiMesa);
+router.use('/roles',middlewares.checkToken,apiRolesRouter);
+router.use('/categoriaProducto',middlewares.checkToken,apiCategoriaProducto);
+router.use('/categoriaPlato',middlewares.checkToken,apiCategoriaPlato);
+router.use('/producto',middlewares.checkToken,apiProducto);
+router.use('/plato',middlewares.checkToken,apiPlato);
+router.use('/mesa',middlewares.checkToken,apiMesa);
 router.use('/empleado',apiEmpleado);
-router.use('/comanda',apiComanda);
-router.use('/detalleComanda',apiDetalleComanda);
+router.use('/comanda',middlewares.checkToken,apiComanda);
+router.use('/detalleComanda',middlewares.checkToken,apiDetalleComanda);
 
 
 module.exports = router;
