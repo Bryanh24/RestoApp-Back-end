@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { Producto, CategoriaProducto } = require("../../db");
-const Sequelize = require("Sequelize");
+const Sequelize = require("sequelize");
 const op = Sequelize.Op;
 
 router.get("/", async (req, res) => {

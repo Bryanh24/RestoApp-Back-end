@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const bcrypt = require("bcryptjs");
-const Sequelize = require("Sequelize");
+const Sequelize = require("sequelize");
 const op = Sequelize.Op;
 const { Empleado, Rol } = require("../../db");
 const moment = require("moment");
